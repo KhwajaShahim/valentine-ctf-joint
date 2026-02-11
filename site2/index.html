@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>CTF – Stage 2</title>
+  <script>
+    function checkFlag() {
+      const input = document.getElementById("flag").value.trim().toLowerCase();
+      if (input === "flag{Rappahannock}") {
+        document.getElementById("content").style.display = "block";
+        document.getElementById("gate").style.display = "none";
+      } else {
+        alert("Incorrect flag.");
+      }
+    }
+  </script>
+</head>
+<body>
+
+<div id="gate">
+  <h1>Enter Flag #1</h1>
+  <input id="flag" placeholder="flag{...}">
+  <button onclick="checkFlag()">Submit</button>
+</div>
+
+<div id="content" style="display:none;">
+  <h1>Access Granted</h1>
+
+  <p>
+  You found where the photo was taken.
+  </p>
+
+  <p>
+  The next step is hidden <b>inside the image itself</b>.
+  Not visible. Not searchable.
+  </p>
+
+  <p>
+  Look into tools that embed and extract data from JPEG images.
+  </p>
+
+  <p>
+  <b>Password:</b> <code>mountainwhisper</code>
+  </p>
+</div>
+
+</body>
+</html>
