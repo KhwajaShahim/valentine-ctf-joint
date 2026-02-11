@@ -1,28 +1,98 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>CTF Challenge</title>
+  <title>Valentine CTF – Stage 1</title>
+  <style>
+    body {
+      background: #0b0b10;
+      color: #eaeaea;
+      font-family: Arial, Helvetica, sans-serif;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+    }
+
+    .card {
+      background: #15151f;
+      padding: 40px;
+      border-radius: 12px;
+      width: 420px;
+      text-align: center;
+      box-shadow: 0 0 25px rgba(230,57,70,0.25);
+    }
+
+    h1 {
+      color: #ff8fab;
+      margin-bottom: 10px;
+    }
+
+    p {
+      color: #aaaaaa;
+      line-height: 1.6;
+    }
+
+    code {
+      background: #0b0b10;
+      padding: 6px 10px;
+      border-radius: 6px;
+      color: #ff8fab;
+      display: inline-block;
+      margin-top: 6px;
+    }
+
+    a.download {
+      display: inline-block;
+      margin-top: 20px;
+      padding: 12px 24px;
+      background: #e63946;
+      color: white;
+      text-decoration: none;
+      border-radius: 8px;
+      font-weight: bold;
+    }
+
+    a.download:hover {
+      background: #ff4d5a;
+    }
+
+    .hint {
+      margin-top: 20px;
+      font-size: 0.85em;
+      color: #777;
+    }
+
+    .heart {
+      font-size: 24px;
+      margin-bottom: 10px;
+    }
+  </style>
 </head>
 <body>
 
-<h1>CTF Joint Challenge</h1>
+  <div class="card">
+    <div class="heart">❤️</div>
+    <h1>Valentine CTF</h1>
 
-<p>
-Download the image below.
-Somewhere inside this image is information about
-<b>where it was taken</b>.
-</p>
+    <p>
+      Download the image below.<br>
+      Somewhere inside it is information about
+      <b>where it was taken</b>.
+    </p>
 
-<p><b>Flag format:</b><br>
-<code>flag{city_or_town}</code><br>
-(lowercase, underscores only)
-</p>
+    <p>
+      <b>Flag format:</b><br>
+      <code>flag{city_or_town}</code>
+    </p>
 
-<a href="photo.jpg" download>
-  Download photo
-</a>
+    <a class="download" href="photo.jpg" download>
+      Download Photo
+    </a>
 
-<p><i>Hint: Images can carry more than what you see.</i></p>
+    <div class="hint">
+      Hint: Love is in the details.
+    </div>
+  </div>
 
 </body>
 </html>

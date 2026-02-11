@@ -1,13 +1,78 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>CTF – Stage 2</title>
+  <title>Valentine CTF – Stage 2</title>
+  <style>
+    body {
+      background: #0b0b10;
+      color: #eaeaea;
+      font-family: Arial, Helvetica, sans-serif;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+    }
+
+    .card {
+      background: #15151f;
+      padding: 40px;
+      border-radius: 12px;
+      width: 420px;
+      text-align: center;
+      box-shadow: 0 0 25px rgba(255,143,171,0.25);
+    }
+
+    h1 {
+      color: #ff8fab;
+      margin-bottom: 15px;
+    }
+
+    input {
+      width: 80%;
+      padding: 10px;
+      border-radius: 6px;
+      border: none;
+      margin-top: 10px;
+      background: #0b0b10;
+      color: #eaeaea;
+    }
+
+    button {
+      margin-top: 15px;
+      padding: 10px 20px;
+      background: #e63946;
+      border: none;
+      color: white;
+      border-radius: 8px;
+      font-weight: bold;
+      cursor: pointer;
+    }
+
+    button:hover {
+      background: #ff4d5a;
+    }
+
+    .content {
+      display: none;
+      color: #aaaaaa;
+    }
+
+    code {
+      background: #0b0b10;
+      padding: 6px 10px;
+      border-radius: 6px;
+      color: #ff8fab;
+      display: inline-block;
+      margin-top: 10px;
+    }
+  </style>
+
   <script>
     function checkFlag() {
       const input = document.getElementById("flag").value.trim().toLowerCase();
-      if (input === "flag{Rappahannock}") {
-        document.getElementById("content").style.display = "block";
+      if (input === "rappahannock" || input === "flag{rappahannock}") {
         document.getElementById("gate").style.display = "none";
+        document.getElementById("content").style.display = "block";
       } else {
         alert("Incorrect flag.");
       }
@@ -16,32 +81,33 @@
 </head>
 <body>
 
-<div id="gate">
-  <h1>Enter Flag #1</h1>
-  <input id="flag" placeholder="flag{...}">
-  <button onclick="checkFlag()">Submit</button>
-</div>
+  <div class="card">
+    <div id="gate">
+      <h1>💌 Stage 2</h1>
+      <p>Enter Flag #1 to continue</p>
+      <input id="flag" placeholder="flag{...}">
+      <br>
+      <button onclick="checkFlag()">Unlock</button>
+    </div>
 
-<div id="content" style="display:none;">
-  <h1>Access Granted</h1>
+    <div id="content" class="content">
+      <h1>❤️ Access Granted</h1>
 
-  <p>
-  You found where the photo was taken.
-  </p>
+      <p>
+        What you seek is hidden <b>inside the image</b>.
+      </p>
 
-  <p>
-  The next step is hidden <b>inside the image itself</b>.
-  Not visible. Not searchable.
-  </p>
+      <p>
+        Look for tools that can extract embedded data
+        from JPEG files.
+      </p>
 
-  <p>
-  Look into tools that embed and extract data from JPEG images.
-  </p>
-
-  <p>
-  <b>Password:</b> <code>mountainwhisper</code>
-  </p>
-</div>
+      <p>
+        <b>Password:</b><br>
+        <code>mountainwhisper</code>
+      </p>
+    </div>
+  </div>
 
 </body>
 </html>
